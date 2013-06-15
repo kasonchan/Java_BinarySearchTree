@@ -16,6 +16,20 @@ public class BST
 		head = null;
 	}
 
+	public Boolean isEmpty()
+	{
+		if (head == null)
+			return true;
+		return false;
+	}
+
+	public Boolean isEmpty(ListNode temp) 
+	{
+		if (temp == null)
+			return true;
+		return false;
+	}
+
 	public void insertNode(int data)
 	{
 		System.out.println("Inserting " + data);
@@ -26,7 +40,7 @@ public class BST
 	{
 		boolean found = false;
 
-		if(head == null)
+		if(isEmpty())
 		{
 			ListNode newNode = new ListNode();
 			newNode.data = data;
@@ -68,9 +82,9 @@ public class BST
 
 	public void inorderPrint()
 	{
-		if(head == null)
+		if(isEmpty())
 		{
-			System.out.println("BST is emtpy!");
+			System.out.println("BST is emtpy.");
 			return;
 		}
 		else		
@@ -86,6 +100,44 @@ public class BST
 		inorderPrint(temp.left);
 		System.out.print(temp.data + " ");
 		inorderPrint(temp.right);
+	}
+
+	public Boolean searchNode(int data) 
+	{
+		System.out.println("Searching " + data);
+
+		if (isEmpty())
+		{
+			return false;
+		}
+		else 
+		{
+			return searchNode(data, head);			
+		}
+	}
+
+	public Boolean searchNode(int data, ListNode temp)
+	{
+		if (data < temp.data) 
+		{
+			if (temp.left != null)
+				return searchNode(data, temp.left);
+			else
+				return false;
+		}
+		else if (data > temp.data) 
+		{
+			if (temp.right != null)
+				return searchNode(data, temp.right);
+			else
+				return false;
+		}
+		else if (data == temp.data)
+		{
+			return true;
+		}
+	
+		return false;
 	}
 
 	public class ListNode

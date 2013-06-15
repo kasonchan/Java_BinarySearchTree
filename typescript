@@ -1,0 +1,42 @@
+Script started on Fri 14 Jun 2013 10:26:07 PM CDT
+]0;ka-son@kason-Lenovo-IdeaPad-S300: ~/Documents/Java/BSTka-son@kason-Lenovo-IdeaPad-S300:~/Documents/Java/BST$ make BST
+javac BST.java Main.java
+]0;ka-son@kason-Lenovo-IdeaPad-S300: ~/Documents/Java/BSTka-son@kason-Lenovo-IdeaPad-S300:~/Documents/Java/BST$ java Main
+Command> insert      empty
+true
+Command> inorder
+BST is emtpy.
+Command> insert
+Integer> 10
+Inserting 10
+Command> insert
+Integer> 20
+Inserting 20
+Command> insert
+Integer> 5
+Inserting 5
+Command> inorder
+5 10 20 
+Command> search
+Integer> 1
+Searching 1
+false
+Command> search
+Integer> 10
+Searching 10
+true
+Command> search
+Integer> 20
+Searching 20
+true
+Command> search
+Integer> 25
+Searching 25
+false
+Command> false     empty
+false
+Command> i exit
+]0;ka-son@kason-Lenovo-IdeaPad-S300: ~/Documents/Java/BSTka-son@kason-Lenovo-IdeaPad-S300:~/Documents/Java/BST$ iex[K[K[Kexit
+exit
+
+Script done on Fri 14 Jun 2013 10:27:49 PM CDT

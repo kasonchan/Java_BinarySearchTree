@@ -24,7 +24,10 @@ public class Main
 			System.out.print("Command> ");
 			command = keyboard.next();
 
-			if (command.equalsIgnoreCase("insert")) {
+		  if (command.equalsIgnoreCase("empty")) {
+				System.out.println(BST.isEmpty());
+			}
+			else if (command.equalsIgnoreCase("insert")) {
 				System.out.print("Integer> ");
 				num = keyboard.nextInt();
 
@@ -33,6 +36,12 @@ public class Main
 			else if (command.equalsIgnoreCase("inorder")) {
 				
 				BST.inorderPrint();
+			}
+			else if (command.equalsIgnoreCase("search")) {
+				System.out.print("Integer> ");
+				num = keyboard.nextInt();
+
+				System.out.println(BST.searchNode(num));
 			}
 			else if (command.equalsIgnoreCase("exit")) {
 				System.exit(0);
